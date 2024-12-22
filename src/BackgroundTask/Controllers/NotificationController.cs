@@ -18,7 +18,7 @@ namespace BackgroundTask.API.Controllers
         }
 
         [HttpPost]
-        [Route("/sendNotification")]
+        [Route("/")]
         public async Task<IActionResult> SendNotificationAsync([FromBody] SendNotificationRequest sendNotificationRequest)
         {
             if (sendNotificationRequest == null || string.IsNullOrEmpty(sendNotificationRequest.Message) || string.IsNullOrEmpty(sendNotificationRequest.Recipient))

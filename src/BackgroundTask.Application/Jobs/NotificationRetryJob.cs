@@ -24,28 +24,20 @@ namespace BackgroundTask.Application.Jobs
             _notificationService = scope.ServiceProvider.GetRequiredService<INotificationService>();
             while (!stoppingToken.IsCancellationRequested)
             {
-                try
-                {
-                    var unsentNotifications = await _context.Notifications
-                        .ToListAsync(stoppingToken);
+                var unsentNotifications = await _context.Notifications
+                    .ToListAsync(stoppingToken);
 
-                    foreach (var notification in unsentNotifications)
+                foreach (var notification in unsentNotifications)
+                {
+                    Console.WriteLine($"Retrying notification to {notification.Recipient}...");
+                    if (await _notificationService.SendNotificationAsync(notification))
                     {
-                        Console.WriteLine($"Retrying notification to {notification.Recipient}...");
-                        if (await _notificationService.SendNotificationAsync(notification))
-                        {
-                            _context.Notifications.Remove(notification);
-                            await _context.SaveChangesAsync(stoppingToken);
-                            Console.WriteLine($"Notification sent successfully on retry.");
-                        }
+                        _context.Notifications.Remove(notification);
+                        await _context.SaveChangesAsync(stoppingToken);
+                        Console.WriteLine($"Notification sent successfully on retry.");
                     }
                 }
-                catch (Exception ex)
-                {
-                    Console.WriteLine($"Error in NotificationRetryJob: {ex.Message}");
-                }
-
-                await Task.Delay(TimeSpan.FromSeconds(10), stoppingToken);
+                await Task.Delay(TimeSpan.FromMinutes(30), stoppingToken);
             }
         }
     }
