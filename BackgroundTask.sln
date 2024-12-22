@@ -3,13 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackgroundTask", "BackgroundTask\BackgroundTask.csproj", "{8A2BDD1C-9AAA-4775-B9CC-D05029957848}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BackgroundTask.API", "BackgroundTask\BackgroundTask.API.csproj", "{8A2BDD1C-9AAA-4775-B9CC-D05029957848}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackgroundTask.Application", "BackgroundTask.Application\BackgroundTask.Application.csproj", "{FECBF3F0-4F9A-4771-8BC5-AC96ED48C6DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BackgroundTask.Application", "BackgroundTask.Application\BackgroundTask.Application.csproj", "{FECBF3F0-4F9A-4771-8BC5-AC96ED48C6DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackgroundTask.Domain", "BackgroundTask.Domain\BackgroundTask.Domain.csproj", "{CBE88646-0CB0-4F4F-A2B8-3E88E4D93475}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BackgroundTask.Domain", "BackgroundTask.Domain\BackgroundTask.Domain.csproj", "{CBE88646-0CB0-4F4F-A2B8-3E88E4D93475}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackgroundTask.Infrastructure", "BackgroundTask.Infrastructure\BackgroundTask.Infrastructure.csproj", "{4917F6FB-8C5B-4965-BBB0-B29F0ED21E03}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BackgroundTask.Infrastructure", "BackgroundTask.Infrastructure\BackgroundTask.Infrastructure.csproj", "{4917F6FB-8C5B-4965-BBB0-B29F0ED21E03}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{BF67BE5B-84AB-47B9-AFB3-E5C395C970E5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{FB62CE77-3750-4A75-A1BC-75CD7B39F629}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{BE5CACCC-996A-40F7-A490-35795A55EB19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackgroundTask.Persistence", "BackgroundTask.Persistence\BackgroundTask.Persistence.csproj", "{55176186-BCD5-4BBF-9326-161CB0320894}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,9 +41,20 @@ Global
 		{4917F6FB-8C5B-4965-BBB0-B29F0ED21E03}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4917F6FB-8C5B-4965-BBB0-B29F0ED21E03}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4917F6FB-8C5B-4965-BBB0-B29F0ED21E03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55176186-BCD5-4BBF-9326-161CB0320894}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55176186-BCD5-4BBF-9326-161CB0320894}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55176186-BCD5-4BBF-9326-161CB0320894}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55176186-BCD5-4BBF-9326-161CB0320894}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8A2BDD1C-9AAA-4775-B9CC-D05029957848} = {BE5CACCC-996A-40F7-A490-35795A55EB19}
+		{FECBF3F0-4F9A-4771-8BC5-AC96ED48C6DD} = {BF67BE5B-84AB-47B9-AFB3-E5C395C970E5}
+		{CBE88646-0CB0-4F4F-A2B8-3E88E4D93475} = {BF67BE5B-84AB-47B9-AFB3-E5C395C970E5}
+		{4917F6FB-8C5B-4965-BBB0-B29F0ED21E03} = {FB62CE77-3750-4A75-A1BC-75CD7B39F629}
+		{55176186-BCD5-4BBF-9326-161CB0320894} = {FB62CE77-3750-4A75-A1BC-75CD7B39F629}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {959C7AD7-F134-4CA7-83B4-3397A8E47A94}

@@ -1,6 +1,6 @@
 ﻿using BackgroundTask.Domain.Entities;
 
-namespace BackgroundTask.Domain.Interfaces
+namespace BackgroundTask.Application.Interfaces
 {
     public interface IMessageProvider
     {

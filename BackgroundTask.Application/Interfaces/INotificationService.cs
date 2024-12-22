@@ -1,6 +1,6 @@
 ﻿using BackgroundTask.Domain.Entities;
 
-namespace BackgroundTask.Application.IServices
+namespace BackgroundTask.Application.Interfaces
 {
     public interface INotificationService
     {
