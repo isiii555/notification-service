@@ -17,7 +17,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{BE5CACCC-996A-40F7-A490-35795A55EB19}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackgroundTask.Persistence", "BackgroundTask.Persistence\BackgroundTask.Persistence.csproj", "{55176186-BCD5-4BBF-9326-161CB0320894}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BackgroundTask.Persistence", "BackgroundTask.Persistence\BackgroundTask.Persistence.csproj", "{55176186-BCD5-4BBF-9326-161CB0320894}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
