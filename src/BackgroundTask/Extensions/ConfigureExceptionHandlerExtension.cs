@@ -5,6 +5,15 @@ using System.Text.Json;
 
 namespace BackgroundTask.API.Extensions
 {
+    /// <summary>
+    /// Provides extension methods for configuring global exception handling in a web application.
+    /// </summary>
+    /// <remarks>
+    /// The <see cref="ConfigureExceptionHandlerExtension"/> class defines a static method that sets up exception handling 
+    /// for the entire application. This ensures that any unhandled exceptions are caught, logged, and a standardized error 
+    /// response is returned to the client.
+    /// </remarks>
+    
     public static class ConfigureExceptionHandlerExtension
     {
         public static void ConfigureExceptionHandler(this WebApplication application)

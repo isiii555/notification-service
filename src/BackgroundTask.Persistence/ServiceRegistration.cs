@@ -4,6 +4,9 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace BackgroundTask.Persistence
 {
+    /// <summary>
+    /// Provides extension methods for registering persistence services in the dependency injection container.
+    /// </summary>
     public static class ServiceRegistration
     {
         public static IServiceCollection AddPersistenceServices(this IServiceCollection services)

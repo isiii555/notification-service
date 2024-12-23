@@ -1,4 +1,5 @@
-﻿using BackgroundTask.Domain.Entities;
+﻿using BackgroundTask.Application.DTOs;
+using BackgroundTask.Domain.Entities;
 
 namespace BackgroundTask.Application.Interfaces
 {
