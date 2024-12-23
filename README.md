@@ -51,7 +51,7 @@ A **background job** (`NotificationRetryJob`) has been implemented to periodical
 - If the service is down, notifications may be lost as they are not persisted for retries.
 - In a real-world scenario, **Outbox pattern** should be implemented to ensure that notifications are safely stored and can be retried when the system recovers.
   
-The retry job runs every 30 minutes, attempting to send any unsent notifications and removing them from the database once successfully sent.
+The retry job runs every 5 minutes, attempting to send any unsent notifications and removing them from the database once successfully sent.
 
 ### 6. **Exception handling and packages**
 
@@ -60,6 +60,11 @@ The retry job runs every 30 minutes, attempting to send any unsent notifications
 
 ### 7. **Configuration**
 Providers, channels, priorities, and enable/disable statuses are configurable through the `appsettings.json` file.
+
+### 8. **Logs**
+In this project, currently, errors are logged using Console.WriteLine for simplicity and quick debugging.
+
+In a real-world, production environment, it is recommended to use a proper logging system such as ILogger. This provides better log management, including logging to files, centralized systems, and more control over log levels (e.g., Info, Warning, Error). Transitioning to ILogger would ensure scalable, maintainable, and more robust logging practices.
 
 #### Example Configuration (`appsettings.json`):
 ```json
